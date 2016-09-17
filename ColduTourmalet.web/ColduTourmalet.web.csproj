@@ -117,12 +117,14 @@
     <Content Include="systemjs.config.js" />
     <Content Include="Web.config" />
     <Content Include="tsconfig.json" />
+    <TypeScriptCompile Include="app\entry.service.ts" />
     <TypeScriptCompile Include="app\page1.component.ts" />
     <TypeScriptCompile Include="app\page2.component.ts" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\EntryController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -135,6 +137,7 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <TypeScriptCompile Include="app\entry.ts" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

@@ -1,2 +1,8 @@
-﻿<h1>Page1</h1>
-<p>This is page 1</p>
+﻿<h1>Entries</h1>
+<div class="grid grid-pad">
+    <div *ngFor="let entry of entries" class="col-1-4">
+        <div class="module entry">
+            <h4>{{entry.title}}</h4>
+        </div>
+    </div>
+</div>
