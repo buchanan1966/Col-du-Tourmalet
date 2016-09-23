@@ -38,15 +38,7 @@ namespace ColduTourmalet.web.Migrations
                 {
                     Created = DateTime.Today,
                     Title = "The First One",
-                    Content = "BLAH BLAH BLAH!!!!",
-                    JournalEntryTags = new List<JournalEntryTag>
-                    {
-                        new JournalEntryTag
-                        {
-                            JournalEntryId = 1,
-                            TagId =5
-                        }
-                    }
+                    Content = "BLAH BLAH BLAH!!!!"
                 }
                 );
 
