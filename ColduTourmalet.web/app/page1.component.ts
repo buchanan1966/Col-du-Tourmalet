@@ -16,6 +16,9 @@ export class Page1Component implements OnInit {
 
     ngOnInit(): void {
         this.entryService.getEntries()
-            .then(entries => this.entries = entries);
+            .then(entries => {
+                console.log(entries)
+                this.entries = entries
+            });
     }
 }

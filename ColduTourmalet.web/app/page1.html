@@ -1,8 +1,8 @@
-﻿<h1>Entries</h1>
+﻿<h1>Journal Entries</h1>
 <div class="grid grid-pad">
     <div *ngFor="let entry of entries" class="col-1-4">
         <div class="module entry">
-            <h4>{{entry.title}}</h4>
+            <h4>{{entry.title}}</h4> - <h5>{{entry.content}}</h5>
         </div>
     </div>
 </div>
