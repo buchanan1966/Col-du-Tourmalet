@@ -12,7 +12,7 @@ namespace ColduTourmalet.web.code.data
         public string Title { get; set; }
         public string Content { get; set; }
 
-        public List<JournalEntryTag> JournalEntryTags { get; set; }
+        public virtual List<JournalEntryTag> JournalEntryTags { get; set; }
 
     }
 

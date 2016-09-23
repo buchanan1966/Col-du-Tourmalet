@@ -13,7 +13,7 @@ namespace ColduTourmalet.web.code.data
             
         }
 
-        public DbSet<JournalEntry> JournalEntries { get; set; }
-        public DbSet<Tag> Tags { get; set; }
+        public virtual DbSet<JournalEntry> JournalEntries { get; set; }
+        public virtual DbSet<Tag> Tags { get; set; }
     }
 }

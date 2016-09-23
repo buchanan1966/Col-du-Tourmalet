@@ -8,10 +8,10 @@ namespace ColduTourmalet.web.code.data
         [Key]
         [Column(Order = 0)]
         public int JournalEntryId { get; set; }
-        public JournalEntry JournalEntry { get; set; }
+        public virtual JournalEntry JournalEntry { get; set; }
         [Key]
         [Column(Order = 1)]
         public int TagId { get; set; }
-        public Tag Tag { get; set; }
+        public virtual Tag Tag { get; set; }
     }
 }

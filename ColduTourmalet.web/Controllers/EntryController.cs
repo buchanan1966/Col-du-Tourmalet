@@ -5,16 +5,17 @@ using System.Net;
 using System.Net.Http;
 using System.Web.Http;
 using ColduTourmalet.web.code.business;
+using ColduTourmalet.web.code.data;
 
 namespace ColduTourmalet.web.Controllers
 {
     public class EntryController : ApiController
     {
-        private JournalEntryManager JournalEntryManager;
+        private IEntityManager<JournalEntry> JournalEntryManager;
 
-        public EntryController()
+        public EntryController(IEntityManager<JournalEntry> journalEntryManager)
         {
-            this.JournalEntryManager = new JournalEntryManager();
+            JournalEntryManager = journalEntryManager;
         }
         // GET api/values
         public IHttpActionResult Get()

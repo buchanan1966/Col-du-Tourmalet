@@ -9,9 +9,10 @@ namespace ColduTourmalet.web.code.business
     public class JournalEntryManager : IEntityManager<JournalEntry>
     {
         private ColduTourmaletDbContext Context;
-        public JournalEntryManager()
+
+        public JournalEntryManager(ColduTourmaletDbContext context)
         {
-            this.Context = new ColduTourmaletDbContext();
+            Context = context;
         }
 
         public List<JournalEntry> GetAll()
@@ -21,12 +22,12 @@ namespace ColduTourmalet.web.code.business
 
         public List<JournalEntry> GetFiltered(Expression<Func<JournalEntry, bool>> predicate)
         {
-            throw new NotImplementedException();
+            return this.Context.JournalEntries.Where(predicate).ToList();
         }
 
         public JournalEntry Get(Expression<Func<JournalEntry, bool>> predicate)
         {
-            throw new NotImplementedException();
+            return this.Context.JournalEntries.SingleOrDefault(predicate);
         }
 
         public JournalEntry Add(JournalEntry model)
