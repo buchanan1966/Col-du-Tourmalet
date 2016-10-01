@@ -10,8 +10,7 @@ namespace ColduTourmalet.web.code.business
         List<T> GetAll();
         List<T> GetFiltered(Expression<Func<T, bool>> predicate);
         T Get(Expression<Func<T, bool>>  predicate);
-        T Add(T model);
-        T Update(T model);
-        T Delete(T model);
+        T Save(T model);
+        void Delete(T model);
     }
 }

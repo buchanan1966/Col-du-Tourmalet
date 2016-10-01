@@ -9,11 +9,11 @@ using ColduTourmalet.web.code.data;
 
 namespace ColduTourmalet.web.Controllers
 {
-    public class EntryController : ApiController
+    public class JournalEntryController : ApiController
     {
         private IEntityManager<JournalEntry> JournalEntryManager;
 
-        public EntryController(IEntityManager<JournalEntry> journalEntryManager)
+        public JournalEntryController(IEntityManager<JournalEntry> journalEntryManager)
         {
             JournalEntryManager = journalEntryManager;
         }
@@ -23,18 +23,11 @@ namespace ColduTourmalet.web.Controllers
             var result = this.JournalEntryManager.GetAll();
             return Ok(result);
         }
-    }
 
-    public class Entry
-    {
-        public Entry(int i)
+        public IHttpActionResult Get(int id)
         {
-            Title = string.Format("BLAH {0}", i);
-            Date = DateTime.Now;
-            Content = "BLAH BLAH BLAH";
+            var result = this.JournalEntryManager.Get(je => je.Id == id);
+            return Ok(result);
         }
-        public string Title { get; set; }
-        public DateTime Date { get; set; }
-        public string Content { get; set; }
     }
 }

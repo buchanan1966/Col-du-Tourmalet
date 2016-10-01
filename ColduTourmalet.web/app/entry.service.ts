@@ -7,7 +7,7 @@ import { Entry } from './entry';
 
 @Injectable()
 export class EntryService {
-    private entriesUrl = '/api/entry';  // URL to web api
+    private entriesUrl = '/api/journalentry';  // URL to web api
 
     constructor(private http: Http) { }
 
@@ -22,10 +22,16 @@ export class EntryService {
             .catch(this.handleError);
     }
 
-//    getHero(id: number): Promise<Hero> {
-//        return this.getHeroes()
-//            .then(heroes => heroes.find(hero => hero.id === id));
-//    }
+    getEntry(id: number): Promise<Entry> {
+        return this.http
+            .get(this.entriesUrl + '/' + id)
+            .toPromise()
+            .then(response => {
+                console.log(response.json())
+                return response.json() as Entry
+            })
+            .catch(this.handleError);
+    }
 //
 //    save(hero: Hero): Promise<Hero> {
 //        if (hero.id) {

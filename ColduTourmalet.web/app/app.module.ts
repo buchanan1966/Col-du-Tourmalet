@@ -5,6 +5,7 @@ import { AppComponent } from './app.component'
 import { HomeComponent } from './home.component';
 import { Page1Component } from './page1.component';
 import { Page2Component } from './page2.component';
+import { JournalEntryDetailComponent } from './journalEntry.component';
 import { EntryService } from './entry.service';
 
 import { routing } from './app.routing';
@@ -18,7 +19,8 @@ import { routing } from './app.routing';
         AppComponent,
         HomeComponent,
         Page1Component,
-        Page2Component],
+        Page2Component,
+        JournalEntryDetailComponent],
     providers: [
         EntryService
     ],

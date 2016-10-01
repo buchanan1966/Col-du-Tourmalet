@@ -14,9 +14,16 @@ namespace ColduTourmalet.web.code.data
 
         public virtual List<JournalEntryTag> JournalEntryTags { get; set; }
 
+        public void Map(JournalEntry model)
+        {
+            Title = model.Title;
+            Content = model.Content;
+            JournalEntryTags = null;
+        }
     }
 
     public interface IEntity
     {
+        
     }
 }

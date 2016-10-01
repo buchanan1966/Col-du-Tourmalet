@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity.Migrations;
 using System.Linq;
 using System.Linq.Expressions;
 using ColduTourmalet.web.code.data;
@@ -30,19 +31,25 @@ namespace ColduTourmalet.web.code.business
             return this.Context.JournalEntries.SingleOrDefault(predicate);
         }
 
-        public JournalEntry Add(JournalEntry model)
+        public JournalEntry Save(JournalEntry model)
         {
-            throw new NotImplementedException();
+            this.Context.JournalEntries.AddOrUpdate(model);
+            return model;
         }
 
-        public JournalEntry Update(JournalEntry model)
+        public void Delete(JournalEntry model)
         {
-            throw new NotImplementedException();
-        }
+            var entity = this.Context.JournalEntries.SingleOrDefault(je => je.Id == model.Id);
+            if (entity != null)
+            {
+                this.Context.JournalEntries.Remove(entity);
+                this.Context.SaveChanges();
+            }
 
-        public JournalEntry Delete(JournalEntry model)
-        {
-            throw new NotImplementedException();
+            else
+            {
+                throw new Exception("Journal Entry not found!");
+            }
         }
     }
 }

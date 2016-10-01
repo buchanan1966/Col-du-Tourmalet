@@ -36,7 +36,7 @@ namespace ColduTourmalet.web.Migrations
                 p => p.Title,
                 new JournalEntry
                 {
-                    Created = DateTime.Today,
+                    Created = DateTime.Now,
                     Title = "The First One",
                     Content = "BLAH BLAH BLAH!!!!"
                 }

@@ -144,6 +144,7 @@
   <ItemGroup>
     <Content Include="app\app.html" />
     <Content Include="app\home.html" />
+    <Content Include="app\journal-entry-detail.html" />
     <Content Include="app\page2.html" />
     <Content Include="app\page1.html" />
     <Content Include="App_Data\ColduTourmaletDb.mdf" />
@@ -168,15 +169,14 @@
     <Compile Include="App_Start\UnityConfig.cs" />
     <Compile Include="App_Start\UnityMvcActivator.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
-    <Compile Include="code\business\JournalEntryManager.cs" />
-    <Compile Include="code\business\EntryModel.cs" />
-    <Compile Include="code\business\IModel.cs" />
     <Compile Include="code\business\IEntityManager.cs" />
+    <Compile Include="code\business\JournalEntryManager.cs" />
+    <Compile Include="code\business\IModel.cs" />
     <Compile Include="code\data\ColduTourmaletDbContext.cs" />
     <Compile Include="code\data\JournalEntry.cs" />
     <Compile Include="code\data\JournalEntryTag.cs" />
     <Compile Include="code\data\Tag.cs" />
-    <Compile Include="Controllers\EntryController.cs" />
+    <Compile Include="Controllers\JournalEntryController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -195,6 +195,7 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <TypeScriptCompile Include="app\entry.ts" />
+    <TypeScriptCompile Include="app\journalEntry.component.ts" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

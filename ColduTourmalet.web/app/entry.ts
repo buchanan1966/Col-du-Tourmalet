@@ -1,5 +1,5 @@
 ﻿export class Entry {
-    int: number;
+    id: number;
     created: Date;
     title: string;
     content: string;
